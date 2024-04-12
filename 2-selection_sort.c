@@ -12,7 +12,7 @@ void selection_sort(int *array, size_t size)
 	for (idx1 = 0; idx1 < size; idx1++)
 	{
 		min = idx1;
-		idx2 = idx1;
+		idx2 = idx1 + 1;
 		for (; idx2 < size; idx2++)
 		{
 			if (ptr1[min] > ptr2[idx2])

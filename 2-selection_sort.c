@@ -12,15 +12,17 @@ void selection_sort(int *array, size_t size)
 	for (idx1 = 0; idx1 < size; idx1++)
 	{
 		min = idx1;
-		idx2 = idx1 + 1;
-		for (; idx2 < size; idx2++)
+		for (idx2 = idx1 + 1; idx2 < size; idx2++)
 		{
 			if (ptr1[min] > ptr2[idx2])
 				min = idx2;
 		}
-		swap = ptr1[idx1];
-		ptr1[idx1] = ptr2[min];
-		ptr2[min] = swap;
-		print_array(array, size);
+		if (min != idx1)
+		{
+			swap = ptr1[idx1];
+			ptr1[idx1] = ptr2[min];
+			ptr2[min] = swap;
+			print_array(array, size);
+		}
 	}
 }

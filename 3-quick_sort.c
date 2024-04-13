@@ -6,6 +6,7 @@
  * @array: list of integers
  * @a: first swap value
  * @b: second swap value
+ * @size: amount of elements in the array
  */
 void swaps(int *array, int a, int b, int size)
 {
@@ -19,7 +20,6 @@ void swaps(int *array, int a, int b, int size)
 		print_array(array, size);
 	}
 }
-
 /**
  * partition - sorts the smaller array given by the parent function
  * @array: list of integers
@@ -43,9 +43,8 @@ int partition(int *array, int min, int max, size_t size)
 	swaps(array, idx1, max, size);
 	return (idx1);
 }
-
 /**
- * quick_sort - sorts an array of integers in ascending order
+ * quicksort - sorts an array of integers in ascending order
  * @array: list of integers
  * @min: number of minimum index
  * @max: number of maximum index
